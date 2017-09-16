@@ -1,16 +1,67 @@
+/**************************************************************************************************************************************/
 *{
-	font-family: Tahoma, Geneva, sans-serif; 
+    font-family: Tahoma, Geneva, sans-serif; 
+}
+html,body{
+	overflow-x:hidden;
 }
 body{
-	margin:0px;
+    margin:0px;
     background-color:white;
 }
+#listheader{
+	user-select: none;
+}
+#list{
+	display:inline-block;
+	margin:0 auto;
+    display:table;
+    background-color: #dddddd;
+    padding:20px;
+    border-radius:15px;
+    width:75%;
+    margin-bottom:10px;
+}
+.event{
+	display:block;
+    background-color:white;
+    padding:20px;
+    margin: 5px 0px;
+    cursor: auto;
+    font-size:16px;
+}
+[contenteditable=true]:empty:before{
+	content:"Click to Type Here";
+    color:lightgrey;
+}
+#save{
+	margin-right:0px;
+}
+.deleteEvent{
+	border: solid 2px red;
+    cursor: pointer;
+    -webkit-transition: font 0.5s;
+    transition: font 0.5s;
+}
+.deleteEvent:hover{
+	font-size:20px;
+}
+.deleteSelected{
+	background-color:#FF4136;
+    color:white !important;
+    font-size:16px;
+}
+.moveSelected{
+	background-color:#FF4136;
+    color:white !important;
+    font-size:16px;
+}
 h1,h2,h3,h4,h5,h6{
-	text-align: center;
+    text-align: center;
     font-weight:normal !important;
 }
 p{
-	font-size:18px;
+    font-size:18px;
 }
 article{
     margin:0 auto;
@@ -19,14 +70,14 @@ article{
     color:black !important;
 }
 footer{
-	background-color:#eeeeee;
+    background-color:#eeeeee;
     padding: 15px 10px;
 }
 a,button{	
-	margin-right:4px;
-	cursor: pointer;
-	background-color:white;
-	padding:15px 25px;
+    margin-right:4px;
+    cursor: pointer;
+    background-color:white;
+    padding:15px 25px;
     color:black;
     display:block;
     text-decoration:none;
@@ -40,19 +91,19 @@ a,button{
     -ms-user-select: none;      /* IE 10+ */ 
 }
 a,button:hover{
-	background-color:#FF4136;
+    background-color:#FF4136;
     color:white !important;
 }
 a,button:visited{
-	color:black;
+    color:black;
 }
 a,button:active{
-	background-color:red;
+    background-color:red;
     color:white;
 }
 
 a.link{
-	text-decoration:underline;
+    text-decoration:underline;
     color:#0000EE;
     padding:0px;
     margin:0px;
@@ -65,13 +116,13 @@ a.link:visited{
 	color:#0000EE;
 }
 button{	
-	font-size:16px;
+    font-size:16px;
     border-style: solid;
     border:none;
-	margin-right:4px;
-	cursor: pointer;
-	background-color:white;
-	padding:15px 25px;
+    margin-right:4px;
+    cursor: pointer;
+    background-color:white;
+    padding:15px 25px;
     color:black;
     display:block;
     text-decoration:none;
@@ -197,57 +248,6 @@ nav[role="navigation"] > a:visited{
     z-index: 2;
     display:block;
     width: 100%;
-}
-/**************************************************************************************************************************************/
-html,body{
-	overflow-x:hidden;
-}
-#listheader{
-	user-select: none;
-}
-#list{
-	display:inline-block;
-	margin:0 auto;
-    display:table;
-    background-color: #dddddd;
-    padding:20px;
-    border-radius:15px;
-    width:75%;
-    margin-bottom:10px;
-}
-.event{
-	display:block;
-    background-color:white;
-    padding:20px;
-    margin: 5px 0px;
-    cursor: auto;
-    font-size:16px;
-}
-[contenteditable=true]:empty:before{
-	content:"Click to Type Here";
-    color:lightgrey;
-}
-#save{
-	margin-right:0px;
-}
-.deleteEvent{
-	border: solid 2px red;
-    cursor: pointer;
-    -webkit-transition: font 0.5s;
-    transition: font 0.5s;
-}
-.deleteEvent:hover{
-	font-size:20px;
-}
-.deleteSelected{
-	background-color:#FF4136;
-    color:white !important;
-    font-size:16px;
-}
-.moveSelected{
-	background-color:#FF4136;
-    color:white !important;
-    font-size:16px;
 }
 @media screen and (max-width: 594px){
 	button:not(.dropdownitem){
