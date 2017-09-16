@@ -1,0 +1,90 @@
+	html,body{
+	overflow-x:hidden;
+}
+#listheader{
+	user-select: none;
+}
+#list{
+	display:inline-block;
+	margin:0 auto;
+    display:table;
+    background-color: #dddddd;
+    padding:20px;
+    border-radius:15px;
+    width:75%;
+    margin-bottom:10px;
+}
+.event{
+	display:block;
+    background-color:white;
+    padding:20px;
+    margin: 5px 0px;
+    cursor: auto;
+    font-size:16px;
+}
+[contenteditable=true]:empty:before{
+	content:"Click to Type Here";
+    color:lightgrey;
+}
+#save{
+	margin-right:0px;
+}
+.deleteEvent{
+	border: solid 2px red;
+    cursor: pointer;
+    -webkit-transition: font 0.5s;
+    transition: font 0.5s;
+}
+.deleteEvent:hover{
+	font-size:20px;
+}
+.deleteSelected{
+	background-color:#FF4136;
+    color:white !important;
+    font-size:16px;
+}
+.moveSelected{
+	background-color:#FF4136;
+    color:white !important;
+    font-size:16px;
+}
+@media screen and (max-width: 594px){
+	button:not(.dropdownitem){
+        margin-right:2px;
+        margin-bottom:4px;
+        font-size:12px;
+        width:50px;
+        height:25px;
+        line-height: 25px;
+        text-align:center;
+        display:inline-block;
+        padding:0px;
+    }
+    .moveSelected{
+      background-color:#FF4136;
+      color:white !important;
+      font-size:12px !important;
+	}
+    .deleteSelected{
+      background-color:#FF4136;
+      color:white !important;
+      font-size:12px !important;
+	}
+    div{
+    	display:block;
+    	float:none !important;
+    }
+    .tableright{
+    	display:inline !important;
+    }
+    .event{
+    	padding:10px;
+        font-size:16px !important;
+    }
+    .dropdownitem{
+    	margin-top:-4px;
+    	padding:5px;
+      	font-size:12px;
+	}
+}
+
