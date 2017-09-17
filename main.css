@@ -238,7 +238,7 @@ nav[role="navigation"] > a:visited{
 .dropdownitems{
     display:none;
 }
-.dropdown:hover.dropdownitems {
+.dropdown:hover .dropdownitems {
     display: block !important;
 }
 .dropdownitem{
