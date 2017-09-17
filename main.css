@@ -2,18 +2,18 @@
     font-family: Tahoma, Geneva, sans-serif; 
 }
 html,body{
-	overflow-x:hidden;
+    overflow-x:hidden;
 }
 body{
     margin:0px;
     background-color:white;
 }
 #listheader{
-	user-select: none;
+    user-select: none;
 }
 #list{
-	display:inline-block;
-	margin:0 auto;
+    display:inline-block;
+    margin:0 auto;
     display:table;
     background-color: #dddddd;
     padding:20px;
@@ -22,7 +22,7 @@ body{
     margin-bottom:10px;
 }
 .event{
-	display:block;
+    display:block;
     background-color:white;
     padding:20px;
     margin: 5px 0px;
@@ -30,28 +30,28 @@ body{
     font-size:16px;
 }
 [contenteditable=true]:empty:before{
-	content:"Click to Type Here";
+    content:"Click to Type Here";
     color:lightgrey;
 }
 #save{
-	margin-right:0px;
+    margin-right:0px;
 }
 .deleteEvent{
-	border: solid 2px red;
+    border: solid 2px red;
     cursor: pointer;
     -webkit-transition: font 0.5s;
     transition: font 0.5s;
 }
 .deleteEvent:hover{
-	font-size:20px;
+    font-size:20px;
 }
 .deleteSelected{
-	background-color:#FF4136;
+    background-color:#FF4136;
     color:white !important;
     font-size:16px;
 }
 .moveSelected{
-	background-color:#FF4136;
+    background-color:#FF4136;
     color:white !important;
     font-size:16px;
 }
@@ -135,18 +135,18 @@ button{
     -ms-user-select: none;      /* IE 10+ */ 
 }
 button:hover{
-	background-color:#FF4136;
+    background-color:#FF4136;
     color:white !important;
 }
 button:visited{
 	color:black;
 }
 button:active{
-	background-color:red;
+    background-color:red;
     color:white;
 }
 #textlogo{
-	text-align:left;
+    text-align:left;
     display:inline-block;
     margin:0px;
     font-size:20px;
@@ -172,7 +172,7 @@ button:active{
 	font-size:40px;
 }
 #logo{
-	width:100px;
+    width:100px;
     height:100px;
     display:block;
     padding:10px;
@@ -188,9 +188,9 @@ nav[role="navigation"]{
 	display:inline-block;
 }
 nav[role="navigation"] > a{
-	margin-right:0px;
-	background-color:#eeeeee;
-	padding:15px 25px;
+    margin-right:0px;
+    background-color:#eeeeee;
+    padding:15px 25px;
     color:black;
     display:inline-block;
     text-decoration:none;
@@ -201,48 +201,48 @@ nav[role="navigation"] > a{
     transition-duration:1s;
 }
 nav[role="navigation"] > a:hover{
-	background-color:#FF4136;
+    background-color:#FF4136;
     color:white !important;
 }
 nav[role="navigation"] > a:visited{
 	color:black;
 }
 .absolute{
-	position:absolute;
+     position:absolute;
 }
 .floatl{
-	float:left;
+     float:left;
 }
 .floatr{
-	float:right;
+    float:right;
 }
 .clearl{
-	clear:left;
+    clear:left;
 }
 .clearr{
-	clear:right;
+    clear:right;
 }
 .clear{
-	clear:both;
+    clear:both;
 }
 .tableright{
-	display:table;
+    display:table;
     float:right;
 }
 .hidden{
-	display:none;
+    display:none;
 }
 .dropdown{
-	display:inline-block;
+    display:inline-block;
 }
-.dropdown > div{
-	display:none;
+.dropdownitems{
+    display:none;
 }
-.dropdown:hover.dropdown > div {
+.dropdown:hover.dropdownitems {
     display: block !important;
 }
 .dropdownitem{
-	background-color: #eeeeee;
+    background-color: #eeeeee;
     position: relative;
     z-index: 2;
     display:block;
