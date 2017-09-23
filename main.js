@@ -194,7 +194,7 @@ function updateevents(){
 function updatetitle(){
   updateevents();
   if(events.length != 0){
-  	title.text("To-Do: " + events.first().html());
+  	title.text("To-Do: " + events.first().text());
   } else {
   	title.text("To-Do List");
   }
