@@ -3,12 +3,13 @@ var title;
 var events;
 
 $(document).ready(function(){
-	//getitem
+    //Gets First List from Local Storage
     var loadlist = localStorage.getItem("list");
     var splitlist = "";
     if(loadlist != "" && loadlist != null){
     	splitlist = loadlist.split("((end))");
     }
+    var numlist = localStorage.getItem("listnum");
     //Variables
     var list = $("#list");
     var addDropdown = $("#adddropdown");
