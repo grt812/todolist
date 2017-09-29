@@ -250,7 +250,7 @@ nav[role="navigation"] > a:visited{
     width: 100%;
 }
 @media screen and (max-width: 594px){
-	button:not(.dropdownitem){
+    button:not(.dropdownitem){
         margin-right:2px;
         margin-bottom:4px;
         font-size:12px;
@@ -286,6 +286,6 @@ nav[role="navigation"] > a:visited{
     	margin-top:-4px;
     	padding:5px;
       	font-size:12px;
-	}
+    }
 }
 
