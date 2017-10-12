@@ -9,23 +9,23 @@ $(document).ready(function(){
     if(loadlist != "" && loadlist != null){
     	splitlist = loadlist.split("((end))");
     }
-    var numlist = localStorage.getItem("listnum");
+    var listnum = localStorage.getItem("listnum");
     //Variables
     var list = $("#list");
     var addDropdown = $("#adddropdown");
     var addDropdownContainer = $("#adddropdowncontainer");
     var addDropdownCarrot = $("#adddropdown > i");
     var addDropdownLinks = addDropdown.children();
-    var addEvent = $("#add");
+    var addItem = $("#add");
     var addHeading = $("#addheading");
     var addSubList = $("#addsublist");
-    var deleteEvent = $("#delete");
-    var moveEvents = $("#move");
-    var saveEvents = $("#save");
-    var clearEvents = $("#clear");
+    var deleteItem = $("#delete");
+    var moveItems = $("#move");
+    var saveItems = $("#save");
+    var clearItems = $("#clear");
     events = $(".event");
-    var eventcontainer = $("#eventcontainer");
-    var eventcontents = [];
+    var itemcontainer = $("#eventcontainer");
+    var itemcontents = [];
     var deletemode = false;
     var movemode = false;
     var eventid = "";
@@ -36,7 +36,7 @@ $(document).ready(function(){
     if(loadlist != "" && loadlist != null){
       for(var k = 0; k < splitlist.length; k++){
       	  if(splitlist[k] != ""){
-            eventcontainer.append("<div id='event"+k+"'class='event' contenteditable='true'>"+splitlist[k]+"</div>");
+            itemcontainer.append("<div id='event"+k+"'class='event' contenteditable='true'>"+splitlist[k]+"</div>");
             $("#event"+k).click(function(){
                 if(deletemode){
               	 	$(event.target).fadeOut(400, function(){ this.remove(); });
@@ -49,7 +49,7 @@ $(document).ready(function(){
     
     
     
-    addEvent.click(function(){
+    addItem.click(function(){
     	updatetitle();
     	if(!deletemode && !movemode){
           updateevents();
@@ -62,7 +62,7 @@ $(document).ready(function(){
                 i = events.length + 1;
               }
           }
-          eventcontainer.append("<div id='event" + eventid + "' class='event' contenteditable='true'></div>");
+          itemcontainer.append("<div id='event" + eventid + "' class='event' contenteditable='true'></div>");
           if(deletemode){
               deleteEvent.addClass("deleteSelected");
               events.addClass("deleteEvent");
@@ -118,7 +118,7 @@ $(document).ready(function(){
       }
     });
     
-    deleteEvent.click(function(){
+    deleteItem.click(function(){
     	updatetitle();
     	if(!movemode){
           updateevents();
@@ -139,9 +139,9 @@ $(document).ready(function(){
           }
         }
     });
-    eventcontainer.sortable();
-    eventcontainer.sortable("disable");
-    moveEvents.click(function(){
+    itemcontainer.sortable();
+    itemcontainer.sortable("disable");
+    moveItems.click(function(){
     	updatetitle();
         if(!deletemode){
           updateevents();
@@ -160,13 +160,13 @@ $(document).ready(function(){
           }
         }
     });
-    clearEvents.click(function(){
+    clearItems.click(function(){
     	updateevents();
-        if(confirm("Are you sure you want to delete all events?")){
+        if(confirm("Are you sure you want to delete all items?")){
     		events.hide(500, function(){ events.remove(); });
         }
     });
-    saveEvents.click(function(){
+    saveItems.click(function(){
       updatetitle();
       if(confirm("Are you sure you want to override the previous save?")){
           updateevents();
