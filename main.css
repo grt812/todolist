@@ -211,7 +211,7 @@ nav[role="navigation"] > a:visited{
      position:absolute;
 }
 .floatl{
-     float:left;
+    float:left;
 }
 .floatr{
     float:right;
@@ -226,6 +226,7 @@ nav[role="navigation"] > a:visited{
     clear:both;
 }
 .tableright{
+    display:table;
     float:right;
 }
 .hidden{
