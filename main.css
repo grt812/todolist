@@ -45,12 +45,7 @@ body{
 .deleteEvent:hover{
     font-size:20px;
 }
-.deleteSelected{
-    background-color:#FF4136;
-    color:white !important;
-    font-size:16px;
-}
-.moveSelected{
+.buttonSelected{
     background-color:#FF4136;
     color:white !important;
     font-size:16px;
