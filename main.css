@@ -10,7 +10,7 @@ body{
 }
 #listheader{    
     margin:0px;
-    padding:0px;
+    padding:16px;
     display: table !important;
     width: auto !important;
 }
