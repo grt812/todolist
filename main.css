@@ -38,7 +38,7 @@ body{
 }
 .deleteEvent{
     border: solid 2px red;
-    cursor: pointer;
+    cursor: pointer !important;
     -webkit-transition: font 0.5s;
     transition: font 0.5s;
 }
