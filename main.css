@@ -13,7 +13,7 @@ body{
 }
 #listheadercontainer{
     user-select: none;
-    display:inline-block;
+    display:table;
 }
 #list{
     display:inline-block;
