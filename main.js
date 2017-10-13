@@ -152,13 +152,13 @@ $(document).ready(function(){
               movemode = false;
               moveItems.removeClass("buttonSelected");
               moveItems.enableSelection();
-              eventcontainer.sortable("disable");
+              itemcontainer.sortable("disable");
               events.css("cursor","auto");
           } else{
               movemode = true;
               moveItems.addClass("buttonSelected");
               moveItems.disableSelection();  
-              eventcontainer.sortable("enable");
+              itemcontainer.sortable("enable");
               events.css("cursor","move");
           }
         }
