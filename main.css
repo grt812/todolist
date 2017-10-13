@@ -9,12 +9,11 @@ body{
     background-color:white;
 }
 #listheader{
-    user-select: none;
-    display:inline-block;
+    text-align: center;
 }
 #listheadercontainer{
-    margin:0 auto;
-    clear: both;
+    user-select: none;
+    display:inline-block;
 }
 #list{
     display:inline-block;
