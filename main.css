@@ -10,7 +10,8 @@ body{
 }
 #listheader{
     user-select: none;
-    position:absolute;
+    position: absolute;
+    text-align: center;
 }
 #list{
     display:inline-block;
