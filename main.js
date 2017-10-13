@@ -10,12 +10,10 @@ $(document).ready(function(){
     	splitlist = loadlist.split("((end))");
     }
     var listnum = localStorage.getItem("listnum");
+    var listtitles = localStorage.getItem("listtitles");
+    var listcontents = localStorage.getItem("listcontents"); 
     //Variables
     var list = $("#list");
-    var addDropdown = $("#adddropdown");
-    var addDropdownContainer = $("#adddropdowncontainer");
-    var addDropdownCarrot = $("#adddropdown > i");
-    var addDropdownLinks = addDropdown.children();
     var addItem = $("#add");
     var addHeading = $("#addheading");
     var addSubList = $("#addsublist");
@@ -26,7 +24,6 @@ $(document).ready(function(){
     var clearItems = $("#clear");
     events = $(".event");
     var itemcontainer = $("#eventcontainer");
-    var itemcontents = [];
     var deletemode = false;
     var movemode = false;
     var eventid = "";
@@ -84,6 +81,7 @@ $(document).ready(function(){
       }
     });
     addList.click(function(){
+        
         listnum++;
     });
     addHeading.click(function(){
