@@ -1,39 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="main.css">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <script src="jquery-3.1.1.min.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script src="jquery.ui.touch-punch.min.js"></script>
-  <script src="main.js"></script>
-  <title>To-Do List</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>To-Do List</title>
 </head>
 <body>
-        <div id="list">
-    	<div id="adddropdown" class="dropdown">
-            <button class="dropdownbutton">Add</button> 
-            <div class="absolute dropdownitems">
-                <button id="add" class="dropdownitem">Item</button>
-                <button id="addheading" class="dropdownitem">Heading</button>
+    <div id="list">
+	<div id="adddropdown" class="dropdown">
+	    <button class="dropdownbutton">Add</button> 
+	    <div class="absolute dropdownitems">
+		<button id="add" class="dropdownitem">Item</button>
+		<button id="addheading" class="dropdownitem">Heading</button>
 		<button id="addlist" class="dropdownitem">List</button>
-                <button id="addsublist" class="dropdownitem">Sublist</button>	
-            </div>
-        </div>
-        <button id="delete">Delete</button>  
-        <button id="move">Move</button> 
-	<h1 id="listheader">To-Do List</h1>
-        <div id="donecontainer" class="tableright">
-           <button id="open">Open</button>
-           <button id="save">Save</button>
-	   <button id="clear">Clear</button>
-        </div>
-        <div id="eventcontainer" class="ui-sortable ui-sortable-disabled"></div>
-        <noscript>Please turn on your Javascript to allow the list to work!</noscript>
+		<button id="addsublist" class="dropdownitem">Sublist</button>	
+	    </div>
+	</div>
+	<button id="delete">Delete</button>  
+	<button id="move">Move</button> 
+	<div id="listheadercontainer">
+	    <h1 id="listheader">To-Do List</h1>
+	</div>
+	<div id="donecontainer" class="tableright">
+	    <button id="open">Open</button>
+	    <button id="save">Save</button>
+	    <button id="clear">Clear</button>
+	</div>
+	<div id="eventcontainer" class="ui-sortable ui-sortable-disabled"></div>
+	<noscript>Please turn on your Javascript to allow the list to work!</noscript>
     </div>
-
-
-</body></html>
+    <script src="jquery-3.1.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="jquery.ui.touch-punch.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
