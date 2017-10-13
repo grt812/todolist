@@ -11,7 +11,8 @@ body{
 #listheader{    
     margin:0px;
     padding:0px;
-    display: table;
+    display: table !important;
+    width: auto !important;
 }
 #listheadercontainer{    
     user-select: none;
