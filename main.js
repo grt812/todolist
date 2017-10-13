@@ -1,11 +1,13 @@
 //Global Variables
 var title;
 var events;
+var loadlist;
+var splitlist;
 
 $(document).ready(function(){
-    //Gets First List from Local Storage
-    var loadlist = localStorage.getItem("list");
-    var splitlist = "";
+    //Local Storage Variables
+    loadlist = localStorage.getItem("list");
+    splitlist = "";
     if(loadlist != "" && loadlist != null){
     	splitlist = loadlist.split("((end))");
     }
@@ -50,7 +52,7 @@ $(document).ready(function(){
     addItem.click(function(){
     	updatetitle();
     	if(!deletemode && !movemode){
-          updateevents();
+          updateitems();
           eventid = events.length;
           //check if there are missing ids
           for(var i = 0; i < events.length; i++){
@@ -87,7 +89,7 @@ $(document).ready(function(){
     addHeading.click(function(){
         updatetitle();
     	if(!deletemode && !movemode){
-          updateevents();
+          updateitems();
           eventid = events.length;
           //check if there are missing ids
           for(var i = 0; i < events.length; i++){
@@ -122,7 +124,7 @@ $(document).ready(function(){
     deleteItem.click(function(){
     	updatetitle();
     	if(!movemode){
-          updateevents();
+          updateitems();
           if(deletemode){
               deletemode = false;
               deleteItem.enableSelection(); 
@@ -145,7 +147,7 @@ $(document).ready(function(){
     moveItems.click(function(){
     	updatetitle();
         if(!deletemode){
-          updateevents();
+          updateitems();
           if(movemode){
               movemode = false;
               moveItems.removeClass("buttonSelected");
@@ -162,7 +164,7 @@ $(document).ready(function(){
         }
     });
     clearItems.click(function(){
-    	updateevents();
+    	updateitems();
         if(confirm("Are you sure you want to delete all items?")){
     		events.hide(500, function(){ events.remove(); });
         }
@@ -170,12 +172,12 @@ $(document).ready(function(){
     saveItems.click(function(){
       updatetitle();
       if(confirm("Are you sure you want to override the previous save?")){
-          updateevents();
-          eventcontents = [];
+          updateitems();
+          itemcontents = [];
           for(var j = 0; j < events.length; j++){
-              eventcontents.push(events[j].innerHTML);
+              itemcontents.push(events[j].innerHTML);
           }
-          localStorage.setItem("list", eventcontents.join("((end))"));
+          localStorage.setItem("list", itemcontents.join("((end))"));
       }
     });
     /*
@@ -188,13 +190,13 @@ $(document).ready(function(){
     */
 });
 //Update Events
-function updateevents(){
+function updateitems(){
   events = $(".event");
 }
 
 //Update title
 function updatetitle(){
-  updateevents();
+  updateitems();
   if(events.length != 0){
   	title.text("To-Do: " + events.first().text());
   } else {
