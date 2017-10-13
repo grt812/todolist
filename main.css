@@ -260,16 +260,11 @@ nav[role="navigation"] > a:visited{
         display:inline-block;
         padding:0px;
     }
-    .moveSelected{
+    .buttonSelected{
       background-color:#FF4136;
       color:white !important;
       font-size:12px !important;
-	}
-    .deleteSelected{
-      background-color:#FF4136;
-      color:white !important;
-      font-size:12px !important;
-	}
+    }
     div{
     	display:block;
     	float:none !important;
