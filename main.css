@@ -11,8 +11,6 @@ body{
 #listheader{
     user-select: none;
     clear: both;
-    text-align: center;
-    margin: 0 auto;
     display:inline-block;
 }
 #list{
@@ -225,7 +223,6 @@ nav[role="navigation"] > a:visited{
     clear:both;
 }
 .tableright{
-    display:table;
     float:right;
 }
 .hidden{
