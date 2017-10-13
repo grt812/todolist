@@ -19,6 +19,7 @@ $(document).ready(function(){
     var addItem = $("#add");
     var addHeading = $("#addheading");
     var addSubList = $("#addsublist");
+    var addList = $("#addlist");
     var deleteItem = $("#delete");
     var moveItems = $("#move");
     var saveItems = $("#save");
@@ -82,7 +83,9 @@ $(document).ready(function(){
           //});
       }
     });
-    
+    addList.click(function(){
+        listnum++;
+    });
     addHeading.click(function(){
         updatetitle();
     	if(!deletemode && !movemode){
@@ -124,17 +127,17 @@ $(document).ready(function(){
           updateevents();
           if(deletemode){
               deletemode = false;
-              deleteEvent.enableSelection(); 
+              deleteItem.enableSelection(); 
               events.css("user-select","all");
               events.attr("contenteditable","true");
-              deleteEvent.removeClass("deleteSelected");
+              deleteItem.removeClass("deleteSelected");
               events.removeClass("deleteEvent");
           } else{
               deletemode = true;
-              deleteEvent.disableSelection(); 
+              deleteItem.disableSelection(); 
               events.css("user-select","none");
               events.attr("contenteditable","false");
-              deleteEvent.addClass("deleteSelected");
+              deleteItem.addClass("deleteSelected");
               events.addClass("deleteEvent");
           }
         }
@@ -147,14 +150,14 @@ $(document).ready(function(){
           updateevents();
           if(movemode){
               movemode = false;
-              moveEvents.removeClass("moveSelected");
-              moveEvents.enableSelection();
+              moveItems.removeClass("moveSelected");
+              moveItems.enableSelection();
               eventcontainer.sortable("disable");
               events.css("cursor","auto");
           } else{
               movemode = true;
-              moveEvents.addClass("moveSelected");
-              moveEvents.disableSelection();  
+              moveItems.addClass("moveSelected");
+              moveItems.disableSelection();  
               eventcontainer.sortable("enable");
               events.css("cursor","move");
           }
