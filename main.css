@@ -13,6 +13,7 @@ body{
     position:absolute;
     left: 50%;
     transform: translateX(-50%);
+    margin:none;
 }
 #list{
     display:inline-block;
