@@ -9,6 +9,10 @@ body{
     background-color:white;
 }
 #listheader{    
+    margin:0px;
+    padding:0px;
+}
+#listheadercontainer{    
     user-select: none;
     position:absolute;
     left: 50%;
