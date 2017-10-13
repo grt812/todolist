@@ -65,7 +65,7 @@ $(document).ready(function(){
           }
           itemcontainer.append("<div id='event" + eventid + "' class='event' contenteditable='true'></div>");
           if(deletemode){
-              deleteItem.addClass("deleteSelected");
+              deleteItem.addClass("buttonSelected");
               events.addClass("deleteEvent");
               $("#event"+eventid).addClass("deleteEvent");
           }
@@ -101,7 +101,7 @@ $(document).ready(function(){
           }
           eventcontainer.append("<div id='event" + eventid + "' class='event'><h2><span contenteditable='true'></span></h2></div>");
           if(deletemode){
-              deleteEvent.addClass("deleteSelected");
+              deleteItem.addClass("buttonSelected");
               events.addClass("deleteEvent");
               $("#event"+eventid).addClass("deleteEvent");
           }
@@ -130,14 +130,14 @@ $(document).ready(function(){
               deleteItem.enableSelection(); 
               events.css("user-select","all");
               events.attr("contenteditable","true");
-              deleteItem.removeClass("deleteSelected");
+              deleteItem.removeClass("buttonSelected");
               events.removeClass("deleteEvent");
           } else{
               deletemode = true;
               deleteItem.disableSelection(); 
               events.css("user-select","none");
               events.attr("contenteditable","false");
-              deleteItem.addClass("deleteSelected");
+              deleteItem.addClass("buttonSelected");
               events.addClass("deleteEvent");
           }
         }
@@ -150,13 +150,13 @@ $(document).ready(function(){
           updateevents();
           if(movemode){
               movemode = false;
-              moveItems.removeClass("moveSelected");
+              moveItems.removeClass("buttonSelected");
               moveItems.enableSelection();
               eventcontainer.sortable("disable");
               events.css("cursor","auto");
           } else{
               movemode = true;
-              moveItems.addClass("moveSelected");
+              moveItems.addClass("buttonSelected");
               moveItems.disableSelection();  
               eventcontainer.sortable("enable");
               events.css("cursor","move");
