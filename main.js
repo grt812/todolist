@@ -65,7 +65,7 @@ $(document).ready(function(){
           }
           itemcontainer.append("<div id='event" + eventid + "' class='event' contenteditable='true'></div>");
           if(deletemode){
-              deleteEvent.addClass("deleteSelected");
+              deleteItem.addClass("deleteSelected");
               events.addClass("deleteEvent");
               $("#event"+eventid).addClass("deleteEvent");
           }
