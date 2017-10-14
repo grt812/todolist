@@ -176,20 +176,6 @@ $(document).ready(function(){
     };
     */
 });
-//Update Events
-function updateitems(){
-  events = $(".event");
-}
-
-//Update title
-function updatetitle(){
-    updateitems();
-    if(events.length != 0){
-  	  title.text("To-Do: " + events.first().text());
-    } else {
-  	  title.text("To-Do List");
-    }
-  }
   function loadlist(){
     if(loadlist != "" && loadlist != null){
         events.remove();
@@ -212,3 +198,18 @@ function updatetitle(){
         listTitle.text(splittitles[0]);
     }
   }
+//Update Events
+function updateitems(){
+  events = $(".event");
+}
+
+//Update title
+function updatetitle(){
+    updateitems();
+    if(events.length != 0){
+  	  title.text("To-Do: " + events.first().text());
+    } else {
+  	  title.text("To-Do List");
+    }
+  }
+
