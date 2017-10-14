@@ -7,6 +7,31 @@ var listtitles;
 var splittitles;
 var itemcontainer;
 var deletemode;
+
+function loadlist(){
+    if(loadlist != "" && loadlist != null){
+        events.remove();
+        updateevents();
+        splitlist = loadlist.split("((end))");
+        for(var k = 0; k < splitlist.length; k++){
+            if(splitlist[k] != ""){              
+              itemcontainer.append("<div id='event"+k+"'class='event' contenteditable='true'>"+splitlist[k]+"</div>");
+              $("#event"+k).click(function(){
+                  if(deletemode){
+                      $(event.target).fadeOut(400, function(){ this.remove(); });
+                  }
+              });
+            }
+        }
+      updatetitle();
+      if(listTitle.text() != "" && listTitle.text() != null){
+          splittitles = listtitles.split("((end))");        
+          listTitle.text(splittitles[0]);
+      }
+    }
+    
+}
+
 $(document).ready(function(){
     //Local Storage Variables
     loadlist = localStorage.getItem("list");
@@ -34,8 +59,6 @@ $(document).ready(function(){
     title = $("title");
     
     loadlist();
-    
-    
     
     addItem.click(function(){
     	updatetitle();
@@ -176,28 +199,6 @@ $(document).ready(function(){
     };
     */
 });
-  function loadlist(){
-    if(loadlist != "" && loadlist != null){
-        events.remove();
-        updateevents();
-    	splitlist = loadlist.split("((end))");
-        for(var k = 0; k < splitlist.length; k++){
-            if(splitlist[k] != ""){              
-              itemcontainer.append("<div id='event"+k+"'class='event' contenteditable='true'>"+splitlist[k]+"</div>");
-              $("#event"+k).click(function(){
-                  if(deletemode){
-                      $(event.target).fadeOut(400, function(){ this.remove(); });
-                  }
-              });
-            }
-        }
-          updatetitle();
-    }
-    if(listTitle.text() != "" && listTitle.text() != null){
-    	splittitles = listtitles.split("((end))");        
-        listTitle.text(splittitles[0]);
-    }
-  }
 //Update Events
 function updateitems(){
   events = $(".event");
