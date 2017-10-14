@@ -177,7 +177,7 @@ $(document).ready(function(){
 function loadlistfunction(){
     if(loadlist != "" && loadlist != null){
         events.remove();
-        updateevents();
+        updateitems();
         splitlist = loadlist.split("((end))");
         for(var k = 0; k < splitlist.length; k++){
             if(splitlist[k] != ""){              
