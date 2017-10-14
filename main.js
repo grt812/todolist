@@ -3,16 +3,17 @@ var title;
 var events;
 var loadlist;
 var splitlist;
-
+var listtitles;
+var splittitles;
+var itemcontainer;
+var deletemode;
 $(document).ready(function(){
     //Local Storage Variables
     loadlist = localStorage.getItem("list");
     splitlist = "";
-    if(loadlist != "" && loadlist != null){
-    	splitlist = loadlist.split("((end))");
-    }
+    listtitles = localStorage.getItem("listtitles");
+    splittitles = "";
     var listnum = localStorage.getItem("listnum");
-    var listtitles = localStorage.getItem("listtitles");
     var listcontents = localStorage.getItem("listcontents"); 
     //Variables
     var list = $("#list");
@@ -24,28 +25,15 @@ $(document).ready(function(){
     var moveItems = $("#move");
     var saveItems = $("#save");
     var clearItems = $("#clear");
+    var listTitle = $("#listheader");
     events = $(".event");
-    var itemcontainer = $("#eventcontainer");
-    var deletemode = false;
+    itemcontainer = $("#eventcontainer");
+    deletemode = false;
     var movemode = false;
     var eventid = "";
     title = $("title");
     
-    
-    //Load List
-    if(loadlist != "" && loadlist != null){
-      for(var k = 0; k < splitlist.length; k++){
-      	  if(splitlist[k] != ""){
-            itemcontainer.append("<div id='event"+k+"'class='event' contenteditable='true'>"+splitlist[k]+"</div>");
-            $("#event"+k).click(function(){
-                if(deletemode){
-              	 	$(event.target).fadeOut(400, function(){ this.remove(); });
-              	}
-            });
-          }
-      }
-      updatetitle();
-    }
+    loadlist();
     
     
     
@@ -83,7 +71,6 @@ $(document).ready(function(){
       }
     });
     addList.click(function(){
-        
         listnum++;
     });
     addHeading.click(function(){
@@ -196,10 +183,32 @@ function updateitems(){
 
 //Update title
 function updatetitle(){
-  updateitems();
-  if(events.length != 0){
-  	title.text("To-Do: " + events.first().text());
-  } else {
-  	title.text("To-Do List");
+    updateitems();
+    if(events.length != 0){
+  	  title.text("To-Do: " + events.first().text());
+    } else {
+  	  title.text("To-Do List");
+    }
   }
-}
+  function loadlist(){
+    if(loadlist != "" && loadlist != null){
+        events.remove();
+        updateevents();
+    	splitlist = loadlist.split("((end))");
+        for(var k = 0; k < splitlist.length; k++){
+            if(splitlist[k] != ""){              
+              itemcontainer.append("<div id='event"+k+"'class='event' contenteditable='true'>"+splitlist[k]+"</div>");
+              $("#event"+k).click(function(){
+                  if(deletemode){
+                      $(event.target).fadeOut(400, function(){ this.remove(); });
+                  }
+              });
+            }
+        }
+          updatetitle();
+    }
+    if(listTitle.text() != "" && listTitle.text() != null){
+    	splittitles = listtitles.split("((end))");        
+        listTitle.text(splittitles[0]);
+    }
+  }
