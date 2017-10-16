@@ -190,9 +190,9 @@ function loadlistfunction(){
             }
         }
       updatetitle();
-      if(listTitle.text() != "" && listTitle.text() != null){
+      if(listTitles.text() != "" && listTitles.text() != null){
           splittitles = listtitles.split("((end))");        
-          listTitle.text(splittitles[0]);
+          listTitles.text(splittitles[0]);
       }
     }
 
