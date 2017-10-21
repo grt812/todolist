@@ -26,7 +26,7 @@ $(document).ready(function(){
     var saveItems = $("#save");
     var clearItems = $("#clear");
     var listTitle = $("#listheader");
-    events = $(".event");
+    events = $(".event:not(#listheadercontainer)");
     itemcontainer = $("#eventcontainer");
     deletemode = false;
     var movemode = false;
@@ -173,8 +173,8 @@ $(document).ready(function(){
     */
     //Functions
     function loadlistfunction(){
+    events.remove();
     if(loadlist != "" && loadlist != null){
-        events.remove();
         updateitems();
         splitlist = loadlist.split("((end))");
         for(var k = 0; k < splitlist.length; k++){
@@ -195,20 +195,20 @@ $(document).ready(function(){
     }
 
 }
-//Update Events
-function updateitems(){
-  events = $(".event");
-}
-
-//Update title
-function updatetitle(){
-    updateitems();
-    if(events.length != 0){
-  	  title.text("To-Do: " + events.first().text());
-    } else {
-  	  title.text("To-Do List");
+    //Update Events
+    function updateitems(){
+      events = $(".event:not(#listheadercontainer)");
     }
-  }
+
+    //Update title
+    function updatetitle(){
+        updateitems();
+        if(events.length != 0){
+          title.text("To-Do: " + events.first().text());
+        } else {
+          title.text("To-Do List");
+        }
+      }
 });
 
 
