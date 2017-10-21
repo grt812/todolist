@@ -1,15 +1,13 @@
-//Global Variables
-var title;
-var events;
-var loadlist;
-var splitlist;
-var listtitles;
-var splittitles;
-var itemcontainer;
-var deletemode;
-
-
 $(document).ready(function(){
+    //Global Variables
+    var title;
+    var events;
+    var loadlist;
+    var splitlist;
+    var listtitles;
+    var splittitles;
+    var itemcontainer;
+    var deletemode;
     //Local Storage Variables
     loadlist = localStorage.getItem("list");
     splitlist = "";
@@ -173,8 +171,8 @@ $(document).ready(function(){
       }
     };
     */
-});
-function loadlistfunction(){
+    //Functions
+    function loadlistfunction(){
     if(loadlist != "" && loadlist != null){
         events.remove();
         updateitems();
@@ -211,4 +209,6 @@ function updatetitle(){
   	  title.text("To-Do List");
     }
   }
+});
+
 
