@@ -161,6 +161,7 @@ $(document).ready(function(){
               itemcontents.push(events[j].innerHTML);
           }
           localStorage.setItem("list", itemcontents.join("((end))"));
+          localStorage.setItem("listtitles", listTitle.html());
       }
     });
     /*
