@@ -194,6 +194,7 @@ $(document).ready(function(){
           listTitles.text(splittitles[0]);
       }
     }
+    listTitle.html(localStorage.getItem("listtitles"));
 
 }
     //Update Events
