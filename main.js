@@ -189,7 +189,8 @@ $(document).ready(function(){
             }
         }
       updatetitle();
-      if(listTitle.text() != "Click to Type Here" && listTitle.text() != null && listtitles != "" && listtitles != null){
+      console.log(listtitles);
+      if(listtitles != "" && listtitles != null){
           splittitles = listtitles.split("((end))");        
           listTitle.text(listtitles);
       }
