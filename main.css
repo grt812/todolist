@@ -47,6 +47,10 @@ body{
     content:"Click to Type Here";
     color:lightgrey;
 }
+#listheadercontainer[contenteditable=true]:empty:before{
+    content:"To-Do List";
+    color:black;
+}
 #clear{
     margin-right:0px;
 }
