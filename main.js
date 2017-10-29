@@ -190,8 +190,8 @@ $(document).ready(function(){
         }
       updatetitle();
       if(listTitle.text() != "" && listTitle.text() != null){
-          splittitles = listtitles.split("((end))");        
-          listTitle.text(splittitles[0]);
+          //splittitles = listtitles.split("((end))");        
+          listTitle.text(listtitles);
       }
     }
     listTitle.html(localStorage.getItem("listtitles"));
