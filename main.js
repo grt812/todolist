@@ -190,7 +190,7 @@ $(document).ready(function(){
         }
       updatetitle();
       console.log(listtitles);
-      if(listtitles != "" && listtitles != null){
+      if(listtitles != "" && listtitles != null && listtitles != " "){
           splittitles = listtitles.split("((end))");        
           listTitle.text(listtitles);
       }
