@@ -82,7 +82,7 @@ $(document).ready(function(){
                 i = events.length + 1;
               }
           }
-          eventcontainer.append("<div id='event" + eventid + "' class='event'><h2><span contenteditable='true'></span></h2></div>");
+          itemcontainer.append("<div id='event" + eventid + "' class='event'><h2><span contenteditable='true'></span></h2></div>");
           if(deletemode){
               deleteItem.addClass("buttonSelected");
               events.addClass("deleteEvent");
