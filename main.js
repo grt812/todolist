@@ -189,8 +189,8 @@ $(document).ready(function(){
             }
         }
       updatetitle();
-      if(listTitle.text() != "" && listTitle.text() != null){
-          //splittitles = listtitles.split("((end))");        
+      if(listTitle.text() != "" && listTitle.text() != null && listtitles != "" && listtitles != null){
+          splittitles = listtitles.split("((end))");        
           listTitle.text(listtitles);
       }
     }
