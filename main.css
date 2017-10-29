@@ -11,14 +11,10 @@ body{
 #listheader{    
     margin:0px;
     padding:6px;
-    display: table !important;
-    width: auto !important;
 }
 #listheadercontent{
     margin:0px;
-    padding:6px;
-    display: table !important;
-    width: auto !important;
+    padding:0px;
 }
 #listheadercontainer{    
     user-select: none;
