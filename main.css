@@ -43,11 +43,11 @@ body{
     cursor: auto;
     font-size:16px;
 }
-[contenteditable=true]:empty:before{
+[contenteditable=true]:empty::before{
     content:"Click to Type Here";
     color:lightgrey;
 }
-#listheadercontainer:empty:before{
+#listheadercontainer:empty::before{
     content:"To-Do List";
     color:black;
 }
