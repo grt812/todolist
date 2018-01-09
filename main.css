@@ -267,7 +267,9 @@ nav[role="navigation"] > a:visited{
     #listheadercontainer{    
         user-select: none;
 	position:static;
-	margin:2px 0;
+	left: auto;
+	transform: none;
+	margin:2px auto;
 	padding:0px;
 	white-space: nowrap;
     }   
@@ -306,7 +308,7 @@ nav[role="navigation"] > a:visited{
     #listheadercontainer{    
         user-select: none;
 	position:static;
-	left: none;
+	left: auto;
 	transform: none;
 	margin:2px 0;
 	padding:0px;
