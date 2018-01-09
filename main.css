@@ -269,7 +269,7 @@ nav[role="navigation"] > a:visited{
 	position:static;
 	left: none;
 	transform: none;
-	margin:2px;
+	margin:2px 0;
 	padding:0px;
 	white-space: nowrap;
     }   
