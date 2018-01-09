@@ -289,7 +289,6 @@ nav[role="navigation"] > a:visited{
     }
     div{
     	display:block;
-    	float:none !important;
     }
     .event{
     	padding:15px;
