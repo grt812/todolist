@@ -24,7 +24,7 @@ body{
     margin:0px;
     padding:0px;
     white-space: nowrap;
-    max-width: 50%;
+    max-width: 500px;
 }
 #list{
     display:inline-block;
