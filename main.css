@@ -263,7 +263,7 @@ nav[role="navigation"] > a:visited{
     display:block;
     width: 100%;
 }
-@media screen and (max-width: 594px){
+@media screen and (max-width: 950px){
     #listheadercontainer{    
         user-select: none;
 	position:static;
