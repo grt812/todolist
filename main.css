@@ -24,6 +24,7 @@ body{
     margin:0px;
     padding:0px;
     white-space: nowrap;
+    max-width: 50%;
 }
 #list{
     display:inline-block;
@@ -268,7 +269,7 @@ nav[role="navigation"] > a:visited{
 	position:static;
 	left: none;
 	transform: none;
-	margin:0px;
+	margin:2px;
 	padding:0px;
 	white-space: nowrap;
     }   
