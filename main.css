@@ -296,6 +296,9 @@ nav[role="navigation"] > a:visited{
     .tableright{
     	display:inline !important;
     }
+    .tableright button{
+    	margin-left:-4px;
+    }
     .event{
     	padding:10px;
         font-size:16px !important;
