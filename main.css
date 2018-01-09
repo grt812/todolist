@@ -263,6 +263,15 @@ nav[role="navigation"] > a:visited{
     width: 100%;
 }
 @media screen and (max-width: 594px){
+    #listheadercontainer{    
+        user-select: none;
+	position:static;
+	left: none;
+	transform: none;
+	margin:0px;
+	padding:0px;
+	white-space: nowrap;
+    }   
     button:not(.dropdownitem){
         margin-right:2px;
         margin-bottom:4px;
