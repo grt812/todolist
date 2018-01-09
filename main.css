@@ -285,17 +285,11 @@ nav[role="navigation"] > a:visited{
     .buttonSelected{
       background-color:#FF4136;
       color:white !important;
-      font-size:12px !important;
+      font-size:16px !important;
     }
     div{
     	display:block;
     	float:none !important;
-    }
-    .tableright{
-    	display:inline !important;
-    }
-    .tableright button{
-    	margin-right:-3px;
     }
     .event{
     	padding:15px;
@@ -304,6 +298,8 @@ nav[role="navigation"] > a:visited{
     .dropdownitem{
     	margin-top:-4px;
     	padding:5px;
+	width:75px;
+        height:50px;
       	font-size:12px;
     }
 }
