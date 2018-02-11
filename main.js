@@ -174,30 +174,30 @@ $(document).ready(function(){
     */
     //Functions
     function loadlistfunction(){
-    events.remove();
-    if(loadlist != "" && loadlist != null){
-        updateitems();
-        splitlist = loadlist.split("((end))");
-        for(var k = 0; k < splitlist.length; k++){
-            if(splitlist[k] != ""){              
-              itemcontainer.append("<div id='event"+k+"'class='event' contenteditable='true'>"+splitlist[k]+"</div>");
-              $("#event"+k).click(function(){
-                  if(deletemode){
-                      $(event.target).fadeOut(400, function(){ this.remove(); });
-                  }
-              });
+        events.remove();
+        if(loadlist != "" && loadlist != null){
+            updateitems();
+            splitlist = loadlist.split("((end))");
+            for(var k = 0; k < splitlist.length; k++){
+                if(splitlist[k] != ""){              
+                  itemcontainer.append("<div id='event"+k+"'class='event' contenteditable='true'>"+splitlist[k]+"</div>");
+                  $("#event"+k).click(function(){
+                      if(deletemode){
+                          $(event.target).fadeOut(400, function(){ this.remove(); });
+                      }
+                  });
+                }
             }
+          updatetitle();
+          console.log(listtitles);
+          if(listtitles != "" && listtitles != null && listtitles != " "){
+              splittitles = listtitles.split("((end))");        
+              listTitle.text(listtitles);
+          }
         }
-      updatetitle();
-      console.log(listtitles);
-      if(listtitles != "" && listtitles != null && listtitles != " "){
-          splittitles = listtitles.split("((end))");        
-          listTitle.text(listtitles);
-      }
+        listTitle.html(localStorage.getItem("listtitles"));
     }
-    listTitle.html(localStorage.getItem("listtitles"));
-
-}
+    
     //Update Events
     function updateitems(){
       events = $(".event:not(#listheadercontainer)");
