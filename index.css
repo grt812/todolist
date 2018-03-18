@@ -165,6 +165,9 @@ button:active{
     display:inline-block;
     float:left;
 }
+.dropdownbutton{
+    float:none !important;
+}
 .dropdownitems{
     display:none;
     transition: all .25s ease;        
