@@ -255,7 +255,6 @@ button:active{
     }
     div{
     	display:block;
-    	float:none !important;
     }
     .tableleft{
     	display:inline !important;
@@ -274,7 +273,6 @@ button:active{
     	margin-top:-4px;
     	padding:5px;
       	font-size:12px;
-	float:none;
     }
 }
 
