@@ -18,10 +18,8 @@ body{
 }
 #listheadercontainer{    
     user-select: none;
-    position:absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    margin:0px;
+    margin:0 auto;
+    display:table;
     padding:0px;
     white-space: nowrap;
     max-width: 500px;
