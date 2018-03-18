@@ -259,6 +259,9 @@ button:active{
     	padding:10px;
         font-size:16px !important;
     }
+    .dropdown{
+    	display: inline;
+    }
     .dropdownitem{
     	margin-top:-4px;
     	padding:5px;
