@@ -150,6 +150,10 @@ button:active{
 .clear{
     clear:both;
 }
+.tableleft{
+    display:table;
+    float:left;
+}
 .tableright{
     display:table;
     float:right;
