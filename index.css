@@ -121,10 +121,10 @@ button{
 }
 button:hover{
     background-color:#e5e5e5;
-    color:white;
+    color:black;
 }
 button:visited{
-	color:black;
+    color:black;
 }
 button:active{
     background-color:red;
