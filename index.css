@@ -228,7 +228,6 @@ nav[role="navigation"] > a:visited{
     display: block !important;
 }
 .dropdownitem{
-    background-color: #eeeeee;
     position: relative;
     z-index: 2;
     display:block;
