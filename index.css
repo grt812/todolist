@@ -252,9 +252,6 @@ button:active{
     .tableright{
     	display:inline !important;
     }
-    .tableright button{
-    	margin-right:-3px;
-    }
     .event{
     	padding:10px;
         font-size:16px !important;
