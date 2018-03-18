@@ -33,6 +33,7 @@ $(document).ready(function(){
     var eventid = "";
     title = $("title");
     loadlistfunction();
+    //Add item click event listener
     addItem.click(function(){
     	updatetitle();
     	if(!deletemode && !movemode){
@@ -66,9 +67,11 @@ $(document).ready(function(){
           //});
       }
     });
+    //Creates new list
     addList.click(function(){
         listnum++;
     });
+    //Add heading click event listener
     addHeading.click(function(){
         updatetitle();
     	if(!deletemode && !movemode){
@@ -103,7 +106,7 @@ $(document).ready(function(){
           //});
       }
     });
-    
+    //Delete item click event listener
     deleteItem.click(function(){
     	updatetitle();
     	if(!movemode){
@@ -127,6 +130,7 @@ $(document).ready(function(){
     });
     itemcontainer.sortable();
     itemcontainer.sortable("disable");
+    //Move item click event listener
     moveItems.click(function(){
     	updatetitle();
         if(!deletemode){
@@ -146,12 +150,14 @@ $(document).ready(function(){
           }
         }
     });
+    //Clear item click event listener
     clearItems.click(function(){
     	updateitems();
         if(confirm("Are you sure you want to delete all items?")){
     		events.hide(500, function(){ events.remove(); });
         }
     });
+    //Save item click event listener
     saveItems.click(function(){
       updatetitle();
       if(confirm("Are you sure you want to override the previous save?")){
