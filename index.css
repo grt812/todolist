@@ -195,6 +195,7 @@ button:active{
 	padding:0px;
 	white-space: nowrap;
 	max-width:none;
+	width: 100%;
     }   
     button:not(.dropdownitem){
         margin-right:2px;
