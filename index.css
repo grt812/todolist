@@ -230,7 +230,7 @@ button:active{
 	white-space: nowrap;
     }   
     button:not(.dropdownitem){
-        margin-right:2px;
+        margin-right:4px;
         margin-bottom:4px;
         font-size:12px;
         width:50px;
