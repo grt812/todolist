@@ -86,35 +86,6 @@ footer{
     background-color:#eeeeee;
     padding: 15px 10px;
 }
-a,button{	
-    margin-right:4px;
-    cursor: pointer;
-    background-color:white;
-    padding:15px 25px;
-    color:black;
-    display:block;
-    text-decoration:none;
-    display:inline-block;
-    -webkit-transition-property: background, color;
-    -webkit-transition-duration:0.4s;
-    transition-property: background, color;
-    transition-duration:0.4s;
-    -webkit-user-select: none;  /* Chrome all / Safari all */
-    -moz-user-select: none;     /* Firefox all */
-    -ms-user-select: none;      /* IE 10+ */ 
-}
-button:hover{
-    background-color:#e5e5e5 !important;
-    color:black !important;
-}
-button:visited{
-    color:black;
-}
-button:active{
-    background-color:#FF4136 !important;
-    color:white;
-}
-
 a.link{
     text-decoration:underline;
     color:#0000EE;
@@ -149,8 +120,8 @@ button{
     -ms-user-select: none;      /* IE 10+ */ 
 }
 button:hover{
-    background-color:#FF4136;
-    color:white !important;
+    background-color:#e5e5e5;
+    color:white;
 }
 button:visited{
 	color:black;
