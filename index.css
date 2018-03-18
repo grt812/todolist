@@ -161,6 +161,7 @@ button:active{
 }
 .dropdown{
     display:inline-block;
+    float:left;
 }
 .dropdownitems{
     display:none;
