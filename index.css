@@ -257,6 +257,9 @@ button:active{
     	display:block;
     	float:none !important;
     }
+    .tableleft{
+    	display:inline !important;
+    }
     .tableright{
     	display:inline !important;
     }
