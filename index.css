@@ -147,6 +147,9 @@ button:active{
     display:block;
     width: 100%;
 }
+.absolute{
+     position:absolute;
+}
 @media screen and (max-width: 1090px){
     #listheadercontainer{    
         user-select: none;
