@@ -173,6 +173,7 @@ button:active{
     z-index: 2;
     display:block;
     width: 100%;
+    float:none;
 }
 .absolute{
      position:absolute;
