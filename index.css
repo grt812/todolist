@@ -238,6 +238,9 @@ button:active{
 	padding:0px;
 	white-space: nowrap;
     }   
+    #donecontainer{
+        float: left;
+    }
     button:not(.dropdownitem){
         margin-right:4px;
         margin-bottom:4px;
