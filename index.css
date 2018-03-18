@@ -131,6 +131,28 @@ button:active{
     color:white;
 }
 
+.floatl{
+    float:left;
+}
+.floatr{
+    float:right;
+}
+.clearl{
+    clear:left;
+}
+.clearr{
+    clear:right;
+}
+.clear{
+    clear:both;
+}
+.tableright{
+    display:table;
+    float:right;
+}
+.hidden{
+    display:none;
+}
 .dropdown{
     display:inline-block;
 }
