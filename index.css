@@ -27,9 +27,8 @@ body{
     max-width: 500px;
 }
 #list{
-    display:inline-block;
     margin:0 auto;
-    display:table;
+    display:block;
     background-color: #dddddd;
     padding:20px;
     border-radius:15px;
