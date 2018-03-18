@@ -262,9 +262,11 @@ button:active{
     }
     .tableleft{
     	display:inline !important;
+	float:none !important;
     }
     .tableright{
     	display:inline !important;
+	float:none !important;
     }
     .event{
     	padding:10px;
