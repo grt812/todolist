@@ -187,8 +187,9 @@ $(document).ready(function(){
     });
     //Functions
     function loadlistfunction(){
-        loading.show();
+        events = $(".event:not(#listheadercontainer)");
         events.remove();
+        loading.show();
         if(loadlist != "" && loadlist != null){
             updateitems();
             splitlist = loadlist.split("((end))");
