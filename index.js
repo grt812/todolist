@@ -26,6 +26,7 @@ $(document).ready(function(){
     var saveItems = $("#save");
     var clearItems = $("#clear");
     var listTitle = $("#listheader");
+    var loading = $("#loading")
     events = $(".event:not(#listheadercontainer)");
     itemcontainer = $("#eventcontainer");
     deletemode = false;
@@ -202,6 +203,7 @@ $(document).ready(function(){
           }
         }
         listTitle.html(localStorage.getItem("listtitles"));
+        loading.hide();
     }
     
     //Update Events
