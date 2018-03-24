@@ -181,6 +181,7 @@ $(document).ready(function(){
     */
     //Functions
     function loadlistfunction(){
+        loading.show();
         events.remove();
         if(loadlist != "" && loadlist != null){
             updateitems();
