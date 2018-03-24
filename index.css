@@ -188,6 +188,9 @@ button:active{
 #loading{
     background-color: white;
 }
+.list{
+    background-color: #f7f7f7;
+}
 @media screen and (max-width: 1090px){
     #listheadercontainer{    
         user-select: none;
