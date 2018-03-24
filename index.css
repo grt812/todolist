@@ -46,9 +46,9 @@ body{
     content:"Click to Type Here";
     color:lightgrey;
 }
-#listheadercontainer:empty::before{
-    content:"To-Do List";
-    color:black;
+#listheader:empty::before{
+    content:"To-Do List" !important;
+    color:black !important;
 }
 #clear{
     margin-right:0px;
