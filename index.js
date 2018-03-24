@@ -26,7 +26,8 @@ $(document).ready(function(){
     var saveItems = $("#save");
     var clearItems = $("#clear");
     var listTitle = $("#listheader");
-    var loading = $("#loading")
+    var loading = $("#loading");
+    var reload = $("#reload");
     events = $(".event:not(#listheadercontainer)");
     itemcontainer = $("#eventcontainer");
     deletemode = false;
@@ -179,6 +180,11 @@ $(document).ready(function(){
       }
     };
     */
+    reload.click(function(){
+        if(confirm("Are you sure you want to revert to the previous save?")){
+            loadlistfunction();
+        }
+    });
     //Functions
     function loadlistfunction(){
         loading.show();
