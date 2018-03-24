@@ -188,7 +188,7 @@ $(document).ready(function(){
     //Functions
     function loadlistfunction(){
         events = $(".event:not(#listheadercontainer)");
-        events.remove();
+        events.hide(500, function(){ events.remove(); });
         loading.show();
         if(loadlist != "" && loadlist != null){
             updateitems();
