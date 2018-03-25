@@ -191,6 +191,7 @@ $(document).ready(function(){
     });
     //Functions
     function loadlistfunction(){
+        resetLocalStorage();
         events = $(".event:not(#listheadercontainer)");
         var deletedEvents = events;
         events.hide(500, function(){ deletedEvents.remove(); });
@@ -252,6 +253,12 @@ $(document).ready(function(){
               	 $(event.target).fadeOut(400, function(){ this.remove(); });
               }
         });
+    };
+    function resetLocalStorage(){
+        loadlist = localStorage.getItem("list");
+        splitlist = "";
+        listtitles = localStorage.getItem("listtitles");
+        splittitles = "";
     };
 });
 
