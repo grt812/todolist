@@ -193,6 +193,8 @@ $(document).ready(function(){
     function loadlistfunction(){
         resetLocalStorage();
         deletemode = false;
+        deleteItem.enableSelection();
+        console.log(deletemode);
         events = $(".event:not(#listheadercontainer)");
         var deletedEvents = events;
         events.hide(500, function(){ deletedEvents.remove(); });
