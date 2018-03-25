@@ -193,7 +193,11 @@ $(document).ready(function(){
     function loadlistfunction(){
         resetLocalStorage();
         deletemode = false;
-        deleteItem.enableSelection();
+        deleteItem.enableSelection(); 
+        events.css("user-select","all");
+        events.attr("contenteditable","true");
+        deleteItem.removeClass("buttonSelected");
+        events.removeClass("deleteEvent");
         console.log(deletemode);
         events = $(".event:not(#listheadercontainer)");
         var deletedEvents = events;
