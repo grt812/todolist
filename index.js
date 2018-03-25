@@ -104,7 +104,7 @@ $(document).ready(function(){
               	 $(event.target).fadeOut(400, function(){ this.remove(); });
               }
           });*/
-          addHeadingDeleteOnClick();
+          addItemDeleteOnClick()
           //$("#event"+eventid+">h2>span").focusout(function(){
           // if($(event.target).html() == ""){
           //  	$(event.target).html("Click to Type Here");
@@ -227,7 +227,6 @@ $(document).ready(function(){
         loading.hide();
         updateitems();
         addItemDeleteOnClick();
-        addHeadingDeleteOnClick();
     }
     
     //Update Events
@@ -246,22 +245,24 @@ $(document).ready(function(){
         }
     }
     function addItemDeleteOnClick(){
-        $("#event"+eventid).off("click");
-        $("#event"+eventid).click(function(){
-          if(deletemode){
-             $(event.target).fadeOut(400, function(){ this.remove(); });
-          }
+        $(".event").off("click");
+        $(".event").each(function(){
+            $(this).click(function(){
+                if(deletemode){
+                    $(event.target).fadeOut(400, function(){ this.remove(); });
+                }
+            });
         });
     };
-    function addHeadingDeleteOnClick(){
-        $("#event"+eventid+", #event"+eventid+">h2>span").off("click");
+    /*function addHeadingDeleteOnClick(){
+        $(".event").off("click");
         $("#event"+eventid+", #event"+eventid+">h2>span").click(function(){
               //document.execCommand('selectAll',false,null);
               if(deletemode){
               	 $(event.target).fadeOut(400, function(){ this.remove(); });
               }
         });
-    };
+    };*/
     function resetLocalStorage(){
         loadlist = localStorage.getItem("list");
         splitlist = "";
