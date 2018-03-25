@@ -13,8 +13,6 @@ $(document).ready(function(){
     splitlist = "";
     listtitles = localStorage.getItem("listtitles");
     splittitles = "";
-    var listnum = localStorage.getItem("listnum");
-    var listcontents = localStorage.getItem("listcontents"); 
     //Variables
     var list = $("#list");
     var addItem = $("#add");
@@ -74,7 +72,10 @@ $(document).ready(function(){
     });
     //Creates new list
     addList.click(function(){
-        listnum++;
+        itemcontainer.append("<div class='list'><h1><span contenteditable='true'></span></h1></div>");
+        $(".list").click(function(){
+            $(this).toggleClass("listClosed");
+        });
     });
     //Add heading click event listener
     addHeading.click(function(){
