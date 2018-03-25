@@ -217,6 +217,8 @@ $(document).ready(function(){
         }
         listTitle.html(localStorage.getItem("listtitles"));
         loading.hide();
+        addItemDeleteOnClick();
+        addHeadingDeleteOnClick();
     }
     
     //Update Events
