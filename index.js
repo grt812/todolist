@@ -192,6 +192,7 @@ $(document).ready(function(){
     //Functions
     function loadlistfunction(){
         resetLocalStorage();
+        deletemode = false;
         events = $(".event:not(#listheadercontainer)");
         var deletedEvents = events;
         events.hide(500, function(){ deletedEvents.remove(); });
