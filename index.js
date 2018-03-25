@@ -218,6 +218,7 @@ $(document).ready(function(){
         }
         listTitle.html(localStorage.getItem("listtitles"));
         loading.hide();
+        updateitems();
         addItemDeleteOnClick();
         addHeadingDeleteOnClick();
     }
