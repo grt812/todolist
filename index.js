@@ -34,6 +34,7 @@ $(document).ready(function(){
     var movemode = false;
     var eventid = "";
     title = $("title");
+    var eventspans =  $("#event"+eventid+", #event"+eventid+">h2>span");
     loadlistfunction();
     //Add item click event listener
     addItem.click(function(){
@@ -57,11 +58,13 @@ $(document).ready(function(){
           }
           $("#event"+eventid).hide();
           $("#event"+eventid).fadeIn(400);
-          $("#event"+eventid).click(function(){
+          updateitems();
+          /*$("#event"+eventid).click(function(){
               if(deletemode){
               	 $(event.target).fadeOut(400, function(){ this.remove(); });
               }
-          });
+          });*/
+          addItemDeleteOnClick();
           //$("#event"+eventid).focusout(function(){
           //	if($(event.target).html() == ""){
           //  	  $(event.target).html("Click to Type Here");
@@ -95,12 +98,13 @@ $(document).ready(function(){
           }
           $("#event"+eventid).hide();
           $("#event"+eventid).fadeIn(400);
-          $("#event"+eventid+", #event"+eventid+">h2>span").click(function(){
+          /*$("#event"+eventid+", #event"+eventid+">h2>span").click(function(){
               //document.execCommand('selectAll',false,null);
               if(deletemode){
               	 $(event.target).fadeOut(400, function(){ this.remove(); });
               }
-          });
+          });*/
+          addHeadingDeleteOnClick();
           //$("#event"+eventid+">h2>span").focusout(function(){
           // if($(event.target).html() == ""){
           //  	$(event.target).html("Click to Type Here");
@@ -218,6 +222,7 @@ $(document).ready(function(){
     //Update Events
     function updateitems(){
       events = $(".event:not(#listheadercontainer)");
+      eventspans =  $("#event"+eventid+", #event"+eventid+">h2>span");
     }
 
     //Update title
@@ -228,7 +233,24 @@ $(document).ready(function(){
         } else {
           title.text("To-Do List");
         }
-      }
+    }
+    function addItemDeleteOnClick(){
+        $("#event"+eventid).off("click");
+        $("#event"+eventid).click(function(){
+          if(deletemode){
+             $(event.target).fadeOut(400, function(){ this.remove(); });
+          }
+        });
+    };
+    function addHeadingDeleteOnClick(){
+        $("#event"+eventid+", #event"+eventid+">h2>span").off("click");
+        $("#event"+eventid+", #event"+eventid+">h2>span").click(function(){
+              //document.execCommand('selectAll',false,null);
+              if(deletemode){
+              	 $(event.target).fadeOut(400, function(){ this.remove(); });
+              }
+        });
+    };
 });
 
 
