@@ -177,14 +177,6 @@ $(document).ready(function(){
           localStorage.setItem("listtitles", listTitle.html());
       }
     });
-    /*
-    window.onerror = function(message, url, lineNumber) {
-      switch(message){
-      	case "Uncaught TypeError: this.select is not a function":
-        	return true; 
-      }
-    };
-    */
     revert.click(function(){
         if(confirm("Are you sure you want to revert to the previous save?")){
             loadlistfunction();
