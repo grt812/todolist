@@ -35,7 +35,7 @@ $(document).ready(function(){
     var eventspans =  $("#event"+eventid+", #event"+eventid+">h2>span");
     loadlistfunction();
     //Add item click event listener
-    addItem.click(function(){
+    $("#add").click(function(){
     	updatetitle();
     	if(!deletemode && !movemode){
           updateitems();
@@ -50,7 +50,7 @@ $(document).ready(function(){
           }
           itemcontainer.append("<div id='event" + eventid + "' class='event'><span contenteditable='true'></span><i class='material-icons close'>close</i></div>");
           if(deletemode){
-              deleteItem.addClass("buttonSelected");
+              $("#delete").addClass("buttonSelected");
               events.addClass("deleteEvent");
               $("#event"+eventid).addClass("deleteEvent");
           }
@@ -71,14 +71,14 @@ $(document).ready(function(){
       }
     });
     //Creates new list
-    addList.click(function(){
+    $("#addlist").click(function(){
         itemcontainer.append("<div class='list'><h1><span contenteditable='true'></span></h1><i class='material-icons close'>close</i></div>");
         $(".list").click(function(){
             $(this).toggleClass("listClosed");
         });
     });
     //Add heading click event listener
-    addHeading.click(function(){
+    $("#addheading").click(function(){
         updatetitle();
     	if(!deletemode && !movemode){
           updateitems();
@@ -93,7 +93,7 @@ $(document).ready(function(){
           }
           itemcontainer.append("<div id='event" + eventid + "' class='event'><h2><span contenteditable='true'></span></h2><i class='material-icons close'>close</i></div>");
           if(deletemode){
-              deleteItem.addClass("buttonSelected");
+              $("#delete").addClass("buttonSelected");
               events.addClass("deleteEvent");
               $("#event"+eventid).addClass("deleteEvent");
           }
@@ -103,23 +103,23 @@ $(document).ready(function(){
       }
     });
     //Delete item click event listener
-    deleteItem.click(function(){
+    $("#delete").click(function(){
     	updatetitle();
     	if(!movemode){
           updateitems();
           if(deletemode){
               deletemode = false;
-              deleteItem.enableSelection(); 
+              $("#delete").enableSelection(); 
               events.css("user-select","all");
               events.attr("contenteditable","true");
-              deleteItem.removeClass("buttonSelected");
+              $("#delete").removeClass("buttonSelected");
               events.removeClass("deleteEvent");
           } else{
               deletemode = true;
-              deleteItem.disableSelection(); 
+              $("#delete").disableSelection(); 
               events.css("user-select","none");
               events.attr("contenteditable","false");
-              deleteItem.addClass("buttonSelected");
+              $("#delete").addClass("buttonSelected");
               events.addClass("deleteEvent");
           }
         }
@@ -127,20 +127,20 @@ $(document).ready(function(){
     itemcontainer.sortable();
     itemcontainer.sortable("disable");
     //Move item click event listener
-    moveItems.click(function(){
+    $("#move").click(function(){
     	updatetitle();
         if(!deletemode){
           updateitems();
           if(movemode){
               movemode = false;
-              moveItems.removeClass("buttonSelected");
-              moveItems.enableSelection();
+              $("#move").removeClass("buttonSelected");
+              $("#move").enableSelection();
               itemcontainer.sortable("disable");
               events.css("cursor","auto");
           } else{
               movemode = true;
-              moveItems.addClass("buttonSelected");
-              moveItems.disableSelection();  
+              $("#move").addClass("buttonSelected");
+              $("#move").disableSelection();  
               itemcontainer.sortable("enable");
               events.css("cursor","move");
           }
@@ -150,14 +150,14 @@ $(document).ready(function(){
         $(this).parent().fadeOut(400, function(){ this.remove(); });;  
     });
     //Clear item click event listener
-    clearItems.click(function(){
+    $("#clear").click(function(){
     	updateitems();
         if(confirm("Are you sure you want to delete all items?")){
     		events.hide(500, function(){ events.remove(); });
         }
     });
     //Save item click event listener
-    saveItems.click(function(){
+    $("#save").click(function(){
       updatetitle();
       if(confirm("Are you sure you want to override the previous save?")){
           updateitems();
@@ -169,7 +169,7 @@ $(document).ready(function(){
           localStorage.setItem("listtitles", listTitle.html());
       }
     });
-    revert.click(function(){
+    $("#revert").click(function(){
         if(confirm("Are you sure you want to revert to the previous save?")){
             loadlistfunction();
         }
@@ -178,10 +178,10 @@ $(document).ready(function(){
     function loadlistfunction(){
         resetLocalStorage();
         deletemode = false;
-        deleteItem.enableSelection(); 
+        $("#delete").enableSelection(); 
         events.css("user-select","all");
         events.attr("contenteditable","true");
-        deleteItem.removeClass("buttonSelected");
+        $("#delete").removeClass("buttonSelected");
         events.removeClass("deleteEvent");
         console.log(deletemode);
         events = $(".event:not(#listheadercontainer)");
