@@ -99,18 +99,7 @@ $(document).ready(function(){
           }
           $("#event"+eventid).hide();
           $("#event"+eventid).fadeIn(400);
-          /*$("#event"+eventid+", #event"+eventid+">h2>span").click(function(){
-              //document.execCommand('selectAll',false,null);
-              if(deletemode){
-              	 $(event.target).fadeOut(400, function(){ this.remove(); });
-              }
-          });*/
           addItemDeleteOnClick()
-          //$("#event"+eventid+">h2>span").focusout(function(){
-          // if($(event.target).html() == ""){
-          //  	$(event.target).html("Click to Type Here");
-          // }
-          //});
       }
     });
     //Delete item click event listener
