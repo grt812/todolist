@@ -48,7 +48,7 @@ $(document).ready(function(){
                 i = events.length + 1;
               }
           }
-          itemcontainer.append("<div id='event" + eventid + "' class='event' contenteditable='true'></div>");
+          itemcontainer.append("<div id='event" + eventid + "' class='event'><span contenteditable='true></span><span style='right:0px; float:right;'>X</span></div>");
           if(deletemode){
               deleteItem.addClass("buttonSelected");
               events.addClass("deleteEvent");
@@ -72,7 +72,7 @@ $(document).ready(function(){
     });
     //Creates new list
     addList.click(function(){
-        itemcontainer.append("<div class='list'><h1><span contenteditable='true'></span></h1></div>");
+        itemcontainer.append("<div class='list'><h1><span contenteditable='true'></span></h1><span style='right:0px; float:right;'>X</span></div>");
         $(".list").click(function(){
             $(this).toggleClass("listClosed");
         });
@@ -91,7 +91,7 @@ $(document).ready(function(){
                 i = events.length + 1;
               }
           }
-          itemcontainer.append("<div id='event" + eventid + "' class='event'><h2><span contenteditable='true'></span></h2></div>");
+          itemcontainer.append("<div id='event" + eventid + "' class='event'><h2><span contenteditable='true'></span></h2><span style='right:0px; float:right;'>X</span></div>");
           if(deletemode){
               deleteItem.addClass("buttonSelected");
               events.addClass("deleteEvent");
@@ -190,7 +190,7 @@ $(document).ready(function(){
             splitlist = loadlist.split("((end))");
             for(var k = 0; k < splitlist.length; k++){
                 if(splitlist[k] != ""){              
-                  itemcontainer.append("<div id='event"+k+"'class='event' contenteditable='true'>"+splitlist[k]+"</div>");
+                  itemcontainer.append("<div id='event"+k+"'class='event'><span contenteditable='true>"+splitlist[k]+"</span><span style='right:0px; float:right;'>X</span></div>");
                   $("#event"+k).click(function(){
                       if(deletemode){
                           $(event.target).fadeOut(400, function(){ this.remove(); });
