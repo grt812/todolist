@@ -146,6 +146,9 @@ $(document).ready(function(){
           }
         }
     });
+    $(".close").click(function(){
+        $(this).parent().fadeOut(400, function(){ this.remove(); });;  
+    });
     //Clear item click event listener
     clearItems.click(function(){
     	updateitems();
