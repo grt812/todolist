@@ -48,7 +48,7 @@ $(document).ready(function(){
                 i = events.length + 1;
               }
           }
-          itemcontainer.append("<div id='event" + eventid + "' class='event'><span contenteditable='true'></span><span class='close'><i class='material-icons'>close</i></span></div>");
+          itemcontainer.append("<div id='event" + eventid + "' class='event'><span contenteditable='true'></span><i class='material-icons close'>close</i></div>");
           if(deletemode){
               deleteItem.addClass("buttonSelected");
               events.addClass("deleteEvent");
@@ -72,7 +72,7 @@ $(document).ready(function(){
     });
     //Creates new list
     addList.click(function(){
-        itemcontainer.append("<div class='list'><h1><span contenteditable='true'></span></h1><span class='close'><i class='material-icons'>close</i></span></div>");
+        itemcontainer.append("<div class='list'><h1><span contenteditable='true'></span></h1><i class='material-icons close'>close</i></div>");
         $(".list").click(function(){
             $(this).toggleClass("listClosed");
         });
@@ -91,7 +91,7 @@ $(document).ready(function(){
                 i = events.length + 1;
               }
           }
-          itemcontainer.append("<div id='event" + eventid + "' class='event'><h2><span contenteditable='true'></span></h2><span class='close'><i class='material-icons'>close</i></span></div>");
+          itemcontainer.append("<div id='event" + eventid + "' class='event'><h2><span contenteditable='true'></span></h2><i class='material-icons close'>close</i></div>");
           if(deletemode){
               deleteItem.addClass("buttonSelected");
               events.addClass("deleteEvent");
@@ -190,7 +190,7 @@ $(document).ready(function(){
             splitlist = loadlist.split("((end))");
             for(var k = 0; k < splitlist.length; k++){
                 if(splitlist[k] != ""){              
-                  itemcontainer.append("<div id='event"+k+"'class='event'><span contenteditable='true'>"+splitlist[k]+"</span><span class='close'><i class='material-icons'>close</i></span></div>");
+                  itemcontainer.append("<div id='event"+k+"'class='event'><span contenteditable='true'>"+splitlist[k]+"</span><i class='material-icons close'>close</i></div>");
                   $("#event"+k).click(function(){
                       if(deletemode){
                           $(event.target).fadeOut(400, function(){ this.remove(); });
