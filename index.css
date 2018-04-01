@@ -191,6 +191,9 @@ button:active{
 .list{
     background-color: #f7f7f7;
 }
+.close{
+    position:relative;
+}
 @media screen and (max-width: 1090px){
     #listheadercontainer{    
         user-select: none;
