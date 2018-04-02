@@ -26,6 +26,7 @@ $(document).ready(function(){
     var loading = $("#loading");
     var revert = $("#revert");
     events = $("span[contenteditable=true]");
+    var eventsparents = $(".event");
     itemcontainer = $("#eventcontainer");
     deletemode = false;
     var movemode = false;
@@ -38,19 +39,19 @@ $(document).ready(function(){
     	updatetitle();
     	if(!deletemode && !movemode){
           updateitems();
-          eventid = events.length;
+          eventid = eventsparents.length;
           //check if there are missing ids
-          for(var i = 0; i < events.length; i++){
+          for(var i = 0; i < eventsparents.length; i++){
               if($("#event"+i).length === 0){
                 //set the new id to the missing id
                 eventid = i;
-                i = events.length + 1;
+                i = eventsparents.length + 1;
               }
           }
           itemcontainer.append("<div id='event" + eventid + "' class='event'><span contenteditable='true'></span><i class='material-icons close'>close</i></div>");
           if(deletemode){
               $("#delete").addClass("buttonSelected");
-              events.addClass("deleteEvent");
+              eventsparents.addClass("deleteEvent");
               $("#event"+eventid).addClass("deleteEvent");
           }
           $("#event"+eventid).hide();
@@ -81,13 +82,13 @@ $(document).ready(function(){
         updatetitle();
     	if(!deletemode && !movemode){
           updateitems();
-          eventid = events.length;
+          eventid = eeventsparents.length;
           //check if there are missing ids
-          for(var i = 0; i < events.length; i++){
+          for(var i = 0; i < eventsparents.length; i++){
               if($("#event"+i).length === 0){
                 //set the new id to the missing id
                 eventid = i;
-                i = events.length + 1;
+                i = eventsparents.length + 1;
               }
           }
           itemcontainer.append("<div id='event" + eventid + "' class='event'><h2><span contenteditable='true'></span></h2><i class='material-icons close'>close</i></div>");
@@ -109,17 +110,17 @@ $(document).ready(function(){
           if(deletemode){
               deletemode = false;
               $("#delete").enableSelection(); 
-              events.css("user-select","all");
+              eventsparents.css("user-select","all");
               events.attr("contenteditable","true");
               $("#delete").removeClass("buttonSelected");
-              events.removeClass("deleteEvent");
+              eventsparents.removeClass("deleteEvent");
           } else{
               deletemode = true;
               $("#delete").disableSelection(); 
-              events.css("user-select","none");
+              eventsparents.css("user-select","none");
               events.attr("contenteditable","false");
               $("#delete").addClass("buttonSelected");
-              events.addClass("deleteEvent");
+              eventsparents.addClass("deleteEvent");
           }
         }
     });
@@ -135,13 +136,13 @@ $(document).ready(function(){
               $("#move").removeClass("buttonSelected");
               $("#move").enableSelection();
               itemcontainer.sortable("disable");
-              events.css("cursor","auto");
+              eventsparents.css("cursor","auto");
           } else{
               movemode = true;
               $("#move").addClass("buttonSelected");
               $("#move").disableSelection();  
               itemcontainer.sortable("enable");
-              events.css("cursor","move");
+              eventsparents.css("cursor","move");
           }
         }
     });
@@ -152,7 +153,7 @@ $(document).ready(function(){
     $("#clear").click(function(){
     	updateitems();
         if(confirm("Are you sure you want to delete all items?")){
-    		events.hide(500, function(){ events.remove(); });
+    		eventsparents.hide(500, function(){ eventsparents.remove(); });
         }
     });
     //Save item click event listener
@@ -161,8 +162,8 @@ $(document).ready(function(){
       if(confirm("Are you sure you want to override the previous save?")){
           updateitems();
           itemcontents = [];
-          for(var j = 0; j < events.length; j++){
-              itemcontents.push(events[j].innerHTML);
+          for(var j = 0; j < eventsparents.length; j++){
+              itemcontents.push(eventsparents[j].innerHTML);
           }
           localStorage.setItem("list", itemcontents.join("((end))"));
           localStorage.setItem("listtitles", listTitle.html());
@@ -178,14 +179,14 @@ $(document).ready(function(){
         resetLocalStorage();
         deletemode = false;
         $("#delete").enableSelection(); 
-        events.css("user-select","all");
+        eventsparents.css("user-select","all");
         events.attr("contenteditable","true");
         $("#delete").removeClass("buttonSelected");
-        events.removeClass("deleteEvent");
+        eventsparents.removeClass("deleteEvent");
         console.log(deletemode);
-        events = $(".event:not(#listheadercontainer)");
-        var deletedEvents = events;
-        events.hide(500, function(){ deletedEvents.remove(); });
+        eventsparents = $(".event:not(#listheadercontainer)");
+        var deletedEvents = eventsparents;
+        eventsparents.hide(500, function(){ deletedEvents.remove(); });
         loading.show();
         if(loadlist != "" && loadlist != null){
             updateitems();
@@ -215,14 +216,14 @@ $(document).ready(function(){
     
     //Update Events
     function updateitems(){
-      events = $(".event:not(#listheadercontainer)");
+      events = $("span[contenteditable=true]");
       eventspans =  $("#event"+eventid+", #event"+eventid+">h2>span");
     }
 
     //Update title
     function updatetitle(){
         updateitems();
-        if(events.length != 0){
+        if(eventsparents.length != 0){
           title.text("To-Do: " + events.first().text());
         } else {
           title.text("To-Do List");
