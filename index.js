@@ -17,7 +17,6 @@ $(document).ready(function(){
     var list = $("#list");
     var addItem = $("#add");
     var addHeading = $("#addheading");
-    var addSubList = $("#addsublist");
     var addList = $("#addlist");
     var deleteItem = $("#delete");
     var moveItems = $("#move");
@@ -26,7 +25,7 @@ $(document).ready(function(){
     var listTitle = $("#listheader");
     var loading = $("#loading");
     var revert = $("#revert");
-    events = $(".event:not(#listheadercontainer)");
+    events = $("span[contenteditable=true]);
     itemcontainer = $("#eventcontainer");
     deletemode = false;
     var movemode = false;
