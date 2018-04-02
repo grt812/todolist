@@ -25,7 +25,7 @@ $(document).ready(function(){
     var listTitle = $("#listheader");
     var loading = $("#loading");
     var revert = $("#revert");
-    events = $("span[contenteditable=true]);
+    events = $("span[contenteditable=true]");
     itemcontainer = $("#eventcontainer");
     deletemode = false;
     var movemode = false;
