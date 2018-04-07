@@ -146,11 +146,6 @@ $(document).ready(function(){
           }
         }
     });
-    $(".close").each(function(){
-        $(this).click(function(){
-            $(this).parent().fadeOut(400, function(){ this.remove(); });;  
-        });
-    });
     //Clear item click event listener
     $("#clear").click(function(){
     	updateitems();
@@ -232,12 +227,10 @@ $(document).ready(function(){
         }
     }
     function addItemDeleteOnClick(){
-        $(".event").off("click");
-        $(".event").each(function(){
+        $(".close").off("click");
+        $(".close").each(function(){
             $(this).click(function(){
-                if(deletemode){
-                    $(event.target).fadeOut(400, function(){ this.remove(); });
-                }
+                $(this).parent().fadeOut(400, function(){ this.remove(); });;  
             });
         });
     };
