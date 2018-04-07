@@ -162,8 +162,8 @@ $(document).ready(function(){
       if(confirm("Are you sure you want to override the previous save?")){
           updateitems();
           itemcontents = [];
-          for(var j = 0; j < eventsparents.length; j++){
-              itemcontents.push(eventsparents[j].innerHTML);
+          for(var j = 0; j < events.length; j++){
+              itemcontents.push(events[j].innerHTML);
           }
           localStorage.setItem("list", itemcontents.join("((end))"));
           localStorage.setItem("listtitles", listTitle.html());
