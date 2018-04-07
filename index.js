@@ -146,8 +146,10 @@ $(document).ready(function(){
           }
         }
     });
-    $(".close").click(function(){
-        $(this).parent().fadeOut(400, function(){ this.remove(); });;  
+    $(".close").each(function(){
+        $(this).click(function(){
+            $(this).parent().fadeOut(400, function(){ this.remove(); });;  
+        });
     });
     //Clear item click event listener
     $("#clear").click(function(){
