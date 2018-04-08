@@ -76,31 +76,7 @@ $(document).ready(function(){
         $(".list").click(function(){
             $(this).toggleClass("listClosed");
         });
-    });
-    //Add heading click event listener
-    $("#addheading").click(function(){
-        updatetitle();
-    	if(!deletemode && !movemode){
-          updateitems();
-          eventid = eeventsparents.length;
-          //check if there are missing ids
-          for(var i = 0; i < eventsparents.length; i++){
-              if($("#event"+i).length === 0){
-                //set the new id to the missing id
-                eventid = i;
-                i = eventsparents.length + 1;
-              }
-          }
-          itemcontainer.append("<div id='event" + eventid + "' class='event'><h2><span contenteditable='true'></span></h2><i class='material-icons close'>close</i></div>");
-          if(deletemode){
-              $("#delete").addClass("buttonSelected");
-              events.addClass("deleteEvent");
-              $("#event"+eventid).addClass("deleteEvent");
-          }
-          $("#event"+eventid).hide();
-          $("#event"+eventid).fadeIn(400);
-          addItemDeleteOnClick()
-      }
+        addItemDeleteOnClick();
     });
     itemcontainer.sortable();
     itemcontainer.sortable("disable");
