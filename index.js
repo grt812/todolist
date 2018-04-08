@@ -110,7 +110,7 @@ $(document).ready(function(){
     $("#clear").click(function(){
     	updateitems();
         if(confirm("Are you sure you want to delete all items?")){
-    		eventsparents.hide(500, function(){ eventsparents.remove(); });
+    		$(".event").hide(500, function(){$(".event").remove(); });
         }
     });
     //Save item click event listener
