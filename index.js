@@ -114,12 +114,16 @@ $(document).ready(function(){
               $("#move").removeClass("buttonSelected");
               $("#move").enableSelection();
               itemcontainer.sortable("disable");
+              $(".list").sortable("disable");
               eventsparents.css("cursor","auto");
           } else{
               movemode = true;
               $("#move").addClass("buttonSelected");
               $("#move").disableSelection();  
               itemcontainer.sortable("enable");
+              $(".list").sortable({
+                connectWith: ".list"
+              });
               eventsparents.css("cursor","move");
           }
         }
