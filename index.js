@@ -48,7 +48,7 @@ $(document).ready(function(){
                 i = eventsparents.length + 1;
               }
           }
-          itemcontainer.append("<div id='event" + eventid + "' class='event'><span contenteditable='true'></span><i class='material-icons close'>close</i></div>");
+          itemcontainer.append("<div id='event" + eventid + "' class='event'><i class='material-icons close'>close</i><span contenteditable='true'></span></div>");
           if(deletemode){
               $("#delete").addClass("buttonSelected");
               eventsparents.addClass("deleteEvent");
@@ -72,7 +72,7 @@ $(document).ready(function(){
     });
     //Creates new list
     $("#addlist").click(function(){
-        itemcontainer.append("<div class='list'><h1><span contenteditable='true'></span></h1><i class='material-icons close'>close</i></div>");
+        itemcontainer.append("<div class='list'><i class='material-icons close'>close</i><h1><span contenteditable='true'></span></h1></div>");
         $(".list").click(function(){
             $(this).toggleClass("listClosed");
         });
