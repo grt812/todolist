@@ -39,7 +39,7 @@ $(document).ready(function(){
     	updatetitle();
     	if(!deletemode && !movemode){
           updateitems();
-          eventid = eventsparents.length;
+          eventid = $(".event").length;
           //check if there are missing ids
           for(var i = 0; i < eventsparents.length; i++){
               if($("#event"+i).length === 0){
