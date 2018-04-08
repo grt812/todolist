@@ -104,6 +104,8 @@ $(document).ready(function(){
     });
     itemcontainer.sortable();
     itemcontainer.sortable("disable");
+    $(".list").sortable();
+    $(".list").sortable("disable");
     //Move item click event listener
     $("#move").click(function(){
     	updatetitle();
