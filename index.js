@@ -150,7 +150,7 @@ $(document).ready(function(){
             splitlist = loadlist.split("((end))");
             for(var k = 0; k < splitlist.length; k++){
                 if(splitlist[k] != ""){              
-                  itemcontainer.append("<div id='event"+k+"'class='event'><span contenteditable='true'>"+splitlist[k]+"</span><i class='material-icons close'>close</i></div>");
+                  itemcontainer.append("<div id='event"+k+"'class='event'><i class='material-icons close'>close</i><span contenteditable='true'>"+splitlist[k]+"</span></div>");
                   $("#event"+k).click(function(){
                       if(deletemode){
                           $(event.target).fadeOut(400, function(){ this.remove(); });
