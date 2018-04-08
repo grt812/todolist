@@ -194,6 +194,7 @@ button:active{
 .close{
     float:right;
     cursor:pointer;
+    user-select:none;
 }
 @media screen and (max-width: 1090px){
     #listheadercontainer{    
