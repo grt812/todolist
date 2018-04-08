@@ -189,10 +189,11 @@ button:active{
     background-color: white;
 }
 .list{
-    background-color: #f7f7f7;
+    background-color: #ffffff;
 }
 .close{
-    float:right;
+    position:absolute;
+    right:50px;
     cursor:pointer;
     user-select:none;
 }
