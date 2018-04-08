@@ -102,28 +102,6 @@ $(document).ready(function(){
           addItemDeleteOnClick()
       }
     });
-    //Delete item click event listener
-    $("#delete").click(function(){
-    	updatetitle();
-    	if(!movemode){
-          updateitems();
-          if(deletemode){
-              deletemode = false;
-              $("#delete").enableSelection(); 
-              eventsparents.css("user-select","all");
-              events.attr("contenteditable","true");
-              $("#delete").removeClass("buttonSelected");
-              eventsparents.removeClass("deleteEvent");
-          } else{
-              deletemode = true;
-              $("#delete").disableSelection(); 
-              eventsparents.css("user-select","none");
-              events.attr("contenteditable","false");
-              $("#delete").addClass("buttonSelected");
-              eventsparents.addClass("deleteEvent");
-          }
-        }
-    });
     itemcontainer.sortable();
     itemcontainer.sortable("disable");
     //Move item click event listener
