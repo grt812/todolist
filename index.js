@@ -39,7 +39,7 @@ $(document).ready(function(){
     	updatetitle();
     	if(!deletemode && !movemode){
           updateitems();
-          eventid = $(".event").length;
+          eventid = $(".event:not(#listheadercontainer)").length;
           //check if there are missing ids
           for(var i = 0; i < eventsparents.length; i++){
               if($("#event"+i).length === 0){
@@ -110,7 +110,7 @@ $(document).ready(function(){
     $("#clear").click(function(){
     	updateitems();
         if(confirm("Are you sure you want to delete all items?")){
-    		$(".event:not(#listheadercontainer)").hide(500, function(){$(".event").remove(); });
+    		$(".event:not(#listheadercontainer)").hide(500, function(){$(".event:not(#listheadercontainer)").remove(); });
         }
     });
     //Save item click event listener
