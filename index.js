@@ -26,7 +26,7 @@ $(document).ready(function(){
     var loading = $("#loading");
     var revert = $("#revert");
     events = $("span[contenteditable=true]");
-    var eventsparents = $(".event");
+    var eventsparents = $(".event:not(#listheadercontainer)");
     itemcontainer = $("#eventcontainer");
     deletemode = false;
     var movemode = false;
@@ -110,7 +110,7 @@ $(document).ready(function(){
     $("#clear").click(function(){
     	updateitems();
         if(confirm("Are you sure you want to delete all items?")){
-    		$(".event").hide(500, function(){$(".event").remove(); });
+    		$(".event:not(#listheadercontainer)").hide(500, function(){$(".event").remove(); });
         }
     });
     //Save item click event listener
@@ -174,6 +174,7 @@ $(document).ready(function(){
     //Update Events
     function updateitems(){
       events = $("span[contenteditable=true]");
+      eventsparents = $(".event:not(#listheadercontainer)");
       eventspans =  $("#event"+eventid+", #event"+eventid+">h2>span");
     }
 
