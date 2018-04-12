@@ -199,7 +199,7 @@ button:active{
     right:50px;
     cursor:pointer;
     user-select:none;
-    background-color:grey;
+    color:grey;
 }
 @media screen and (max-width: 1090px){
     #listheadercontainer{    
