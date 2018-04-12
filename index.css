@@ -242,7 +242,7 @@ button:active{
       	font-size:12px;
     }
     .close{
-        font-size:15px;
+        font-size:15px !important;
     }
 }
 @media screen and (max-width: 615px){
