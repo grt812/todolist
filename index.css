@@ -241,6 +241,9 @@ button:active{
         height:35px;
       	font-size:12px;
     }
+    .close{
+        font-size:15px;
+    }
 }
 @media screen and (max-width: 615px){
     #listheadercontainer{    
