@@ -22,7 +22,7 @@ body{
     display:table;
     padding:0px;
     white-space: nowrap;
-    max-width: 500px;
+    width:100%;
 }
 #list{
     margin:0 auto;
