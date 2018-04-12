@@ -201,6 +201,9 @@ button:active{
     user-select:none;
     color:grey;
 }
+.inline{
+    display:inline;
+}
 @media screen and (max-width: 1090px){
     #listheadercontainer{    
         user-select: none;
