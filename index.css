@@ -48,7 +48,7 @@ body{
     color:lightgrey;
 }
 #listheader:empty::before{
-    content:"To-Do Lists" !important;
+    content:"List Title" !important;
     color:black !important;
 }
 #clear{
