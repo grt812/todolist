@@ -260,7 +260,7 @@ button:active{
 	white-space: nowrap;
     }   
     #donecontainer{
-        float: left;
+        display:inline;
     }
     button:not(.dropdownitem){
         margin-right:4px;
