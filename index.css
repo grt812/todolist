@@ -183,6 +183,7 @@ button:active{
     display: block;
     width: 100%;
     float: none;
+    margin-bottom: 0px;
 }
 .absolute{
     position: absolute;
