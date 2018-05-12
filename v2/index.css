@@ -6,4 +6,8 @@ html,body{
   width:100%;
   position:fixed;
   background-color:grey;
+  display:flex;
+}
+#buttons{
+  flex-grow:1;
 }
