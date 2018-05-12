@@ -1,1 +1,9 @@
-
+html,body{
+  margin:0;
+  padding:0;
+}
+#menu{
+  width:100%;
+  position:fixed;
+  background-color:grey;
+}
