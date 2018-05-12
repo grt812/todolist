@@ -1,3 +1,3 @@
 $(document).ready(function(){
-  $("#menufiller").height($("#menu").height());
+  $("#menu-filler").height($("#menu").height());
 });
